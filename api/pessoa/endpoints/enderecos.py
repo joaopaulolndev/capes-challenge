@@ -41,7 +41,7 @@ class EnderecoItem(Resource):
     @api.marshal_with(endereco_with_pessoa)
     def get(self, id):
         """
-        Retorna a lista de endereco com as pessoas.
+        Retorna a lista de endereco com as pessoa.
         """
         return Endereco.query.filter(Endereco.id == id).one()
 

@@ -9,9 +9,6 @@ Pessoa
 def create_pessoa(data):
     nome = data.get('nome')
     cpf = data.get('cpf')
-    # endereco_id = data.get('endereco_id')
-    # endereco = Endereco.query.filter(Endereco.id == endereco_id).one()
-    # pessoa = Pessoa(nome, cpf, endereco)
 
     pessoa = Pessoa(nome, cpf)
     db.session.add(pessoa)

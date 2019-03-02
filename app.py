@@ -11,9 +11,6 @@ from api.restplus import api
 from database import db
 
 app = Flask(__name__)
-# logging_conf_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../logging.conf'))
-# logging.config.fileConfig(logging_conf_path)
-# log = logging.getLogger(__name__)
 
 
 def configure_app(flask_app):
@@ -41,7 +38,7 @@ def initialize_app(flask_app):
 def main():
     initialize_app(app)
 
-    app.logger.error('>>>>> Starting development server at http://'+app.config['SERVER_NAME']+'/api/ <<<<<')
+    app.logger.error('>>>>> Starting development server at http://' + app.config['SERVER_NAME'] + '/api/ <<<<<')
     handler = RotatingFileHandler('access.log', maxBytes=10000, backupCount=1)
     handler.setLevel(logging.WARNING)
     app.logger.addHandler(handler)

@@ -13,10 +13,6 @@ class Pessoa(db.Model):
     cpf = db.Column(db.Text)
     pub_date = db.Column(db.DateTime)
 
-    #endereco_id = db.Column(db.Integer, db.ForeignKey('endereco.id'))
-    #endereco = db.relationship('Endereco', backref=db.backref('pessoas', lazy='dynamic'))
-
-    #def __init__(self, nome, cpf, endereco, pub_date=None):
     def __init__(self, nome, cpf, pub_date=None):
         self.nome = nome
         self.cpf = cpf
@@ -27,6 +23,7 @@ class Pessoa(db.Model):
     def __repr__(self):
         return '<Pessoa %r>' % self.nome
 
+
 class Endereco(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     endereco = db.Column(db.String(255))
@@ -36,7 +33,7 @@ class Endereco(db.Model):
     pub_date = db.Column(db.DateTime)
 
     pessoa_id = db.Column(db.Integer, db.ForeignKey('pessoa.id'))
-    pessoa = db.relationship('Pessoa', backref=db.backref('enderecos', lazy='dynamic'))
+    pessoas = db.relationship('Pessoa', backref=db.backref('endereco', lazy='dynamic'))
 
     def __init__(self, endereco, cidade, estado, cep, pessoa_id, pub_date=None):
         self.endereco = endereco
