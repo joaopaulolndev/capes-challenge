@@ -70,7 +70,7 @@ pip install Flask
 
    [https://champions-league-challenge.herokuapp.com/api/champions-league/](https://champions-league-challenge.herokuapp.com/api/champions-league/)
 
-## Resources:
+## Recursos:
 
 
 * GET /pessoa/enderecos/ 
