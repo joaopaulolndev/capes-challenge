@@ -57,6 +57,12 @@ Instalando `Flask` from the `pip`
 ```
 pip install Flask
 ```
+
+Instalando as dependências
+
+```
+pip install -r requirements.txt
+```
     
 ## Run Instructions:
     Rode esse código local > python app.py 
