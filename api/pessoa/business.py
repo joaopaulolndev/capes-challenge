@@ -19,8 +19,6 @@ def update_pessoa(pessoa_id, data):
     pessoa = Pessoa.query.filter(Pessoa.id == pessoa_id).one()
     pessoa.nome = data.get('nome')
     pessoa.cpf = data.get('cpf')
-    # endereco_id = data.get('endereco_id')
-    # pessoa.endereco = Endereco.query.filter(Endereco.id == endereco_id).one()
     db.session.add(pessoa)
     db.session.commit()
 
