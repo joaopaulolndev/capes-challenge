@@ -76,8 +76,20 @@ pip install -r requirements.txt
 
    [https://champions-league-challenge.herokuapp.com/api/champions-league/](https://champions-league-challenge.herokuapp.com/api/champions-league/)
 
-## Recursos:
+## Run Tests
+```
+cd tests
+python -m unittest
 
+(env) (base) Macbook-JP:tests joaopaulo$ python -m unittest
+....
+----------------------------------------------------------------------
+Ran 9 tests in 0.071s
+
+OK
+```
+
+## Recursos:
 
 * GET /pessoa/enderecos/ 
 <br/>Retorna a lista de endereços
