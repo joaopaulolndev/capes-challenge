@@ -67,14 +67,6 @@ pip install -r requirements.txt
 ## Run Instructions:
     Rode esse código local > python app.py 
     Open the Browser http://localhost:8888/api/
-       
-
-## @todo Build:
-
-   Pode visualizar a aplicação nesse endereço. <br/>
-   You can view the application at this address.
-
-   [https://champions-league-challenge.herokuapp.com/api/champions-league/](https://champions-league-challenge.herokuapp.com/api/champions-league/)
 
 ## Run Tests
 ```
