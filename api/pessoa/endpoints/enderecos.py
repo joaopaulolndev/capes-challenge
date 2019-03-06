@@ -1,13 +1,9 @@
-import logging
-
 from flask import request
 from flask_restplus import Resource
 from api.pessoa.business import create_endereco, delete_endereco, update_endereco
 from api.pessoa.serializers import endereco, endereco_with_pessoa
 from api.restplus import api
 from database.models import Endereco
-
-log = logging.getLogger(__name__)
 
 ns = api.namespace('pessoa/enderecos', description='Operações relacionadas a endereços')
 

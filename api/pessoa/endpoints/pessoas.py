@@ -1,5 +1,3 @@
-import logging
-
 from flask import request
 from flask_restplus import Resource
 from api.pessoa.business import create_pessoa, update_pessoa, delete_pessoa
@@ -7,8 +5,6 @@ from api.pessoa.serializers import pessoa, page_of_pessoas
 from api.pessoa.parsers import pagination_arguments
 from api.restplus import api
 from database.models import Pessoa
-
-# log = logging.getLogger(__name__)
 
 ns = api.namespace('pessoa/pessoas', description='Operações relacionadas a pessoa')
 
